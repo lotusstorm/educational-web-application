@@ -25,7 +25,7 @@ const routes = [
         component: Container,
         children: [
             {
-                path: '',
+                path: 'lessons',
                 component: Lessons,
                 name: 'lessons',
             },

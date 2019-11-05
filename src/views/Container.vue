@@ -1,22 +1,8 @@
 <template>
     <div class="container">
-        <nav class="container__header">
-            <input
-                    type="button"
-                    @click="to('tests')"
-                    value="Tests"
-            > |
-            <input
-                    type="button"
-                    @click="to('statistic')"
-                    value="Statistic"
-            > |
-            <input
-                    type="button"
-                    @click="to('lessons')"
-                    value="Lessons"
-            >
-        </nav>
+        <app-header
+                :data="nav"
+        />
         <hr>
         <router-view/>
     </div>
@@ -24,16 +10,36 @@
 </template>
 
 <script>
+    import Header from '@/components/AppHeader.vue'
+
     export default {
         name: "Container",
-        methods: {
-            to(name) {
-                this.$router.push({ name: name }, () => {});
-            },
+        components: {
+            'app-header': Header
+        },
+        data() {
+            return {
+                nav: [
+                    {path: 'tests', value: 'Tests'},
+                    {path: 'statistic', value: 'Statistic'},
+                    {path: 'lessons', value: 'Lessons'}
+                ]
+            }
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .nav {
+        padding: 5px;
 
+        &__linc {
+            font-weight: bold;
+            color: #2c3e50;
+
+            &.router-link-exact-active {
+                color: #42b983;
+            }
+        }
+    }
 </style>

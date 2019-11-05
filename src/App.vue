@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <app-header/>
+        <app-header :data="nav"/>
         <div class="app__content">
             <router-view/>
         </div>
@@ -14,6 +14,14 @@
         name: "App",
         components: {
             'app-header': Header
+        },
+        data() {
+            return {
+                nav: [
+                        {path: '/', value: 'Home'},
+                        {path: '/courses', value: 'Courses'}
+                    ]
+            }
         }
     }
 </script>
