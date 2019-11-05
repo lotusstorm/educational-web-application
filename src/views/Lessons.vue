@@ -73,7 +73,6 @@
 
         &__item {
             padding: 2px;
-            cursor: pointer;
         }
     }
 </style>
