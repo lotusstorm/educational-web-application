@@ -41,22 +41,20 @@
 
         &__button {
             display: flex;
-            border-top: none;
-            border-left: none;
-            border-right: none;
+            border: none;
             align-items: center;
             justify-content: center;
             border-radius: 5px;
             color: #2c3e50;
             background-color: #42b983;
-            border-color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
         }
 
         .active {
             background-color: #2c3e50;
             color: #42b983;
-            border-color: #42b983;
-            transition: background-color .5s;
+            border-bottom: 2px solid #42b983;
+            transition: background-color, border-bottom .5s;
         }
     }
 </style>

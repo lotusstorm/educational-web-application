@@ -8,10 +8,7 @@
                 > {{ leson.title }} </li>
             </ul>
         </div>
-        <app-pagination
-            :data="getLessons"
-            :id="$route.params.id"
-        ></app-pagination>
+        <app-pagination/>
     </div>
 </template>
 

@@ -15,15 +15,12 @@
 
     export default {
         name: "AppPagination",
-        props: {
-            data: Array,
-            id: [Number, String]
-        },
         components: {
             'app-controller': AppController,
         },
         computed: {
             ...mapGetters([
+                'getLessons',
                 'getItemsOnPage',
                 'getCurrentPage',
             ]),
@@ -31,7 +28,7 @@
              * Кнопки для переключения страний
              * */
             items() {
-                let lessons = this.data.filter(i => i.courseId === this.$route.params.id);
+                let lessons = this.getLessons.filter(i => i.courseId === this.$route.params.id);
                 return Math.ceil(lessons.length/this.getItemsOnPage)
             }
         },
