@@ -29,7 +29,8 @@
              * */
             items() {
                 let lessons = this.getLessons.filter(i => i.courseId === this.$route.params.id);
-                return Math.ceil(lessons.length/this.getItemsOnPage)
+                let pages = Math.ceil(lessons.length/this.getItemsOnPage);
+                return pages > 1 ? pages : 0
             }
         },
         methods: {

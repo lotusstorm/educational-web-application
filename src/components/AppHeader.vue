@@ -27,6 +27,9 @@
 
 <style scoped lang="scss">
     .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 10px;
 
         &__link {

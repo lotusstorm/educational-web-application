@@ -1,13 +1,12 @@
 <template>
     <div class="lessons">
-        <div class="lessons__content">
-            <ul class="">
-                <li
-                    v-for="(leson, index) in render"
-                    :key="index"
-                > {{ leson.title }} </li>
-            </ul>
-        </div>
+        <ul class="lessons__list">
+            <li
+                v-for="(leson, index) in render"
+                :key="index"
+                class="lessons__item"
+            > {{ leson.title }} </li>
+        </ul>
         <app-pagination/>
     </div>
 </template>
@@ -32,9 +31,6 @@
                 if (lessons.length > 0) {
 
                     const countOfPages = this.arrayToMatrix(lessons, this.getItemsOnPage);
-                    // while (!countOfPages[this.getCurrentPage] && this.getCurrentPage > 0) {
-                    //     this.actionCurrentPage(this.getCurrentPage - 1);
-                    // }
                     return countOfPages[this.getCurrentPage]
                 } else {
                     return lessons
@@ -64,6 +60,20 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .lessons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            padding: 2px;
+            cursor: pointer;
+        }
+    }
 </style>

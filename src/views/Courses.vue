@@ -38,12 +38,16 @@
 
 <style scoped lang="scss">
     .courses {
+        display: flex;
+        justify-content: center;
 
         &__list {
-
+            display: flex;
+            flex-direction: column;
         }
 
         &__item {
+            padding: 2px;
             cursor: pointer;
         }
     }
