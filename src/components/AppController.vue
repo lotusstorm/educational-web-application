@@ -3,7 +3,6 @@
         <input
                 type="button"
                 :value="value"
-                :id="id"
                 :class="['controller__button', {'active' : value - 1 === getCurrentPage}]"
                 @click="Event"
         >
@@ -17,7 +16,6 @@
         name: "AppController",
         props: {
             value: [String, Number],
-            id: [String, Number]
         },
         computed: {
             ...mapGetters([

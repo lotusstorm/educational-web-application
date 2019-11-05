@@ -1,12 +1,9 @@
 <template>
     <div class="container">
-        <app-header
-                :data="nav"
-        />
+        <app-header :data="nav"/>
         <hr>
         <router-view/>
     </div>
-
 </template>
 
 <script>
@@ -14,9 +11,6 @@
 
     export default {
         name: "Container",
-        components: {
-            'app-header': Header
-        },
         data() {
             return {
                 nav: [
@@ -25,7 +19,10 @@
                     {path: 'lessons', value: 'Lessons'}
                 ]
             }
-        }
+        },
+        components: {
+            'app-header': Header
+        },
     }
 </script>
 

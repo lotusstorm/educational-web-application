@@ -12,17 +12,17 @@
 
     export default {
         name: "App",
-        components: {
-            'app-header': Header
-        },
         data() {
             return {
                 nav: [
-                        {path: '/', value: 'Home'},
-                        {path: '/courses', value: 'Courses'}
-                    ]
+                    {path: '/', value: 'Home'},
+                    {path: '/courses', value: 'Courses'}
+                ]
             }
-        }
+        },
+        components: {
+            'app-header': Header
+        },
     }
 </script>
 

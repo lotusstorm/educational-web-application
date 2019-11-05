@@ -25,7 +25,7 @@
                 'getCurrentPage',
             ]),
             /**
-             * Кнопки для переключения страний
+             * Кнопки для переключения страниц
              * */
             items() {
                 let lessons = this.getLessons.filter(i => i.courseId === this.$route.params.id);
