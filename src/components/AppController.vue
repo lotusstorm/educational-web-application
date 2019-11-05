@@ -41,21 +41,22 @@
 
         &__button {
             display: flex;
-            border-radius: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
             align-items: center;
             justify-content: center;
-            /*<!--background-color: $btn-bg-color;-->*/
-            /*<!--border: none;-->*/
-            /*<!--border-bottom: 2px solid $btn-border-color;-->*/
-            /*<!--@include large-text;-->*/
-            /*<!--font-size: 1em;-->*/
-            /*<!--color: $btn-text-color;-->*/
+            border-radius: 5px;
+            color: #2c3e50;
+            background-color: #42b983;
+            border-color: #2c3e50;
         }
 
         .active {
-            background-color: #ffffff;
+            background-color: #2c3e50;
+            color: #42b983;
+            border-color: #42b983;
             transition: background-color .5s;
-            /*<!--color: $text-color;-->*/
         }
     }
 </style>
